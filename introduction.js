@@ -145,7 +145,7 @@ console.log(isNaN("money")); // money is not a Number
 
 
 console.log(Math.PI.toFixed(1));
-console.log(Math.trunc(Math.PI));
+console.log(Math.trunc(Math.PI)); //truncate the number
 console.log(Math.round(Math.PI));
 
 console.log(Math.round(4.5)); // below 0.5 gives previous number and above 0.5 gives the next number
@@ -164,3 +164,7 @@ console.log(Math.random()); // it gives the random number within the value of 0 
 console.log(Math.ceil(Math.random()*10)); // give 1 to 10 number
 
 console.log(Math.floor(Math.random()*100+1)); // give 1 to 100 number
+
+
+const randomlet = "vengateshprogrammer";
+console.log(randomlet.charAt(Math.random()*randomlet.length));

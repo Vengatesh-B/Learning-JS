@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  font-size: 16px;
+  background-color: wheat;
+  color: black;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 250%;
+}
+
+.carousel .carousel-item a {
+  display: block;
+  width: inherit;
+  height: inherit;
+  text-indent: -9999px;
+  background-color: rgba(var(--carousel-item-empty-color-rgb),0.5);
+  background-image: var(--_image-url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: filter var(--carousel-transition-duration) 
+    var(--carousel-transition-ease);
+}
+
+.font {
+  font-family: 'Times New Roman', Times, serif !important;
+}

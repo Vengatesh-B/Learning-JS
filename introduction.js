@@ -166,5 +166,29 @@ console.log(Math.ceil(Math.random()*10)); // give 1 to 10 number
 console.log(Math.floor(Math.random()*100+1)); // give 1 to 100 number
 
 
+//Generate the random character give string
 const randomlet = "vengateshprogrammer";
 console.log(randomlet.charAt(Math.random()*randomlet.length));
+
+// if statements
+
+let customerISBanned = false;
+let viewer = "js course"
+let reply;
+let finance = true;
+if (customerISBanned) {
+  reply = 'sorry';
+  console.log(reply);
+}
+else if (viewer && finance) { // use relational operator AND
+  reply = `Enjoy ${viewer} and finance course`;
+  console.log(reply);
+}
+else if (viewer) {
+  reply = `Enjoy ${viewer}`;
+  console.log(reply);
+}
+else {
+  reply = 'course not available';
+  console.log(reply);
+}

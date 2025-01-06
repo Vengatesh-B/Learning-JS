@@ -236,3 +236,17 @@ switch (numb) {
 }
 
 // ternary opeators
+
+// to simplify the if else statements
+
+const age = 5;
+
+let drink = age >= 18 ? "Beer" : "Juice";
+console.log(drink);
+
+let testScores = 50;
+let grades = testScore > 89 ? "A" 
+: testScore > 79 ? "B"
+: testScore > 69 ? "C"
+: "D";
+console.log(grade);

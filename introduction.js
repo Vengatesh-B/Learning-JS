@@ -25,7 +25,7 @@ secondStr = "cat";
 let result = firstNum + secondStr;
 console.log(result); // when we give number and string addition it will convert to string type
 
-console.log (typeof(result));
+console.log(typeof (result));
 
 
 // To find the true or false 
@@ -36,15 +36,15 @@ console.log(me === 20); // true
 console.log(me !== 23); // true
 console.log(me !== 20); // false
 console.log(me <= 12); // false
-console.log(me >=45); // false
+console.log(me >= 45); // false
 
 
 
 
 
 console.log("learn javascript");
-console.log(typeof(65));
-console.log(typeof("hai"));
+console.log(typeof (65));
+console.log(typeof ("hai"));
 
 // strings property
 
@@ -64,7 +64,7 @@ console.log(vari.indexOf("at")); // to find the index of the variable in the giv
 
 console.log(vari.lastIndexOf("y")); // to find the last index of the variable in the given string
 
-console.log(vari.slice(2,6)); // slice the word
+console.log(vari.slice(2, 6)); // slice the word
 
 console.log(vari.toLowerCase());
 
@@ -83,7 +83,7 @@ const myNumber = 34;
 
 let myFloat = 34.01;
 
-console.log(typeof(myFloat));
+console.log(typeof (myFloat));
 
 console.log(myFloat);
 
@@ -97,7 +97,7 @@ let str = "me";
 
 console.log(Number(str)); // It give a result as NaN (Not a Number)
 
-console.log(Number(myStrToNum)); 
+console.log(Number(myStrToNum));
 
 console.log(Number(true)); // When give the boolean data it give 1 false 0 
 
@@ -153,22 +153,22 @@ console.log(Math.ceil(4.3)); // It give the next number whatever the float value
 
 console.log(Math.floor(4.8)); // It give the previous number whatever the float value is..
 
-console.log(Math.pow(2,3)); // power of in this 2 power 3 is 8
+console.log(Math.pow(2, 3)); // power of in this 2 power 3 is 8
 
-console.log(Math.min(10,3,0.5,4,87,45)); // give the minimum value
+console.log(Math.min(10, 3, 0.5, 4, 87, 45)); // give the minimum value
 
-console.log(Math.max(54,0.2,2,58,5757)); // give the maximum value
+console.log(Math.max(54, 0.2, 2, 58, 5757)); // give the maximum value
 
 console.log(Math.random()); // it gives the random number within the value of 0 to 1 only
 
-console.log(Math.ceil(Math.random()*10)); // give 1 to 10 number
+console.log(Math.ceil(Math.random() * 10)); // give 1 to 10 number
 
-console.log(Math.floor(Math.random()*100+1)); // give 1 to 100 number
+console.log(Math.floor(Math.random() * 100 + 1)); // give 1 to 100 number
 
 
 //Generate the random character give string
 const randomlet = "vengateshprogrammer";
-console.log(randomlet.charAt(Math.random()*randomlet.length));
+console.log(randomlet.charAt(Math.random() * randomlet.length));
 
 // if statements
 
@@ -199,7 +199,7 @@ let testScore = 6;
 let grade;
 let collegeStudent = true;
 
-if(testScore >= 90) {
+if (testScore >= 90) {
   grade = 'A';
 }
 else if (testScore >= 80) {
@@ -220,3 +220,19 @@ else {
   }
 }
 console.log(grade);
+
+
+// switch statements
+
+let numb = 40;
+
+switch (numb) {
+  case 40:
+    console.log("The number is 40");
+
+    break;
+  default:
+    console.log("The number is not 40");
+}
+
+// ternary opeators

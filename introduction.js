@@ -245,8 +245,155 @@ let drink = age >= 18 ? "Beer" : "Juice";
 console.log(drink);
 
 let testScores = 50;
-let grades = testScore > 89 ? "A" 
-: testScore > 79 ? "B"
-: testScore > 69 ? "C"
-: "D";
-console.log(grade);
+let grades = testScore > 89 ? "A"
+  : testScore > 79 ? "B"
+    : testScore > 69 ? "C"
+      : "D";
+console.log(grades);
+
+// get input from users
+
+// let dataFromCustomer = alert("it shows just ok");
+// console.log(dataFromCustomer);
+
+// the console prints undefined data 
+
+// let dataFromCustomer2 = confirm("ok === true/n cancel === False");
+// console.log(dataFromCustomer2);
+
+// type the data from user
+
+// let userdata = prompt("Enter your name");
+// console.log(userdata);
+
+//sometimes the user denied to enter the name the console print null value, to avoid the scenario we use null collasking operator
+
+// let userdatanull = prompt("Enter your name");
+// console.log(userdata ?? "You didn't enter the name");
+
+// if the user just click ok nothing data will provide to avoid this problem 
+
+/*let user2 = prompt("Enter your name");
+if (length.user2) {
+  console.log(user2);
+}
+else {
+  console.log(user2 ?? "you didn't enter the name");
+}*/
+
+//note that null and empty is different
+
+//trim fuction to remove unwanted space from the data
+
+// console.log(user2.trim().length);
+
+
+// Rock,paper and Scissors game
+
+let userConfirmation = confirm("Shall we play the Rock,Paper and Scissors game?");
+if (userConfirmation === true) {
+  //alert("welcome to the Game");
+
+  let player = prompt("Choose: Rock or Paper or Scisscors");
+  if (player) {
+    player = player.toLowerCase().trim();
+    let rock = 1;
+    let paper = 2;
+    let scisscors = 3;
+    let computer = Math.ceil(Math.random() * 10);
+    if (computer <= 3) {
+      computer = "rock";
+      if (player === computer) {
+        alert("game tie");
+      }
+      else if (player === "paper") {
+        alert("Computer select rock! you lose..");
+      }
+      else if (player === "scissors") {
+        alert("Computer select rock! you lose..")
+      }
+    }
+    else if (computer <= 6 && computer > 3) {
+      computer = "paper";
+      if (player === computer) {
+        alert("Computer select paper! game tie");
+      }
+      else if (player === "rock") {
+        alert("Computer select paper! You wins!");
+      }
+      else if (player === "scissors") {
+        alert("Computer select paper! You Wins!");
+      }
+    }
+    else {
+      computer = "scissors";
+      if (player === computer) {
+        alert("Computer select Scissors! game tie");
+      }
+      else if (player === "paper") {
+        alert("Computer select Scissors! you lose..");
+      }
+      else if (player === "rock") {
+        alert("Computer select Scissors! You lose!");
+      }
+    }
+
+
+  }
+  else if (player ?? "Please type your choice") {
+    alert("Please type your choice");
+    let player = prompt("Choose: Rock or Paper or Scisscors");
+  if (player) {
+    player = player.toLowerCase().trim();
+    let rock = 1;
+    let paper = 2;
+    let scisscors = 3;
+    let computer = Math.ceil(Math.random() * 10);
+    if (computer <= 3) {
+      computer = "rock";
+      if (player === computer) {
+        alert("game tie");
+      }
+      else if (player === "paper") {
+        alert("Computer select rock! you lose..");
+      }
+      else if (player === "scissors") {
+        alert("Computer select rock! you lose..")
+      }
+    }
+    else if (computer <= 6 && computer > 3) {
+      computer = "paper";
+      if (player === computer) {
+        alert("Computer select paper! game tie");
+      }
+      else if (player === "rock") {
+        alert("Computer select paper! You wins!");
+      }
+      else if (player === "scissors") {
+        alert("Computer select paper! You Wins!");
+      }
+    }
+    else {
+      computer = "scissors";
+      if (player === computer) {
+        alert("Computer select Scissors! game tie");
+      }
+      else if (player === "paper") {
+        alert("Computer select Scissors! you lose..");
+      }
+      else if (player === "rock") {
+        alert("Computer select Scissors! You lose!");
+      }
+    }
+
+
+  }
+    
+  }
+}
+else {
+  alert("Okay, Maybe next time..");
+}
+
+console.log(userConfirmation);
+

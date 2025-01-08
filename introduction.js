@@ -287,6 +287,13 @@ else {
 
 // console.log(user2.trim().length);
 
+// Loops
+
+let i=0;
+while(i>50){
+    console.log(i);
+    i = i+1;
+}
 
 
 

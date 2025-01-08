@@ -288,11 +288,42 @@ else {
 // console.log(user2.trim().length);
 
 // Loops
-
+// while loop
 let i=0;
-while(i>50){
+while(i<=5){
     console.log(i);
     i = i+1;
+}
+
+// do while loop
+
+let j = 59;
+do {
+  console.log(j);
+  j = j + 1;
+}while (j<60)
+
+// for loop 
+
+for (i=0; i<3; i++)
+{
+  console.log(i);
+}
+
+let nameprint = "programming";
+for (i=0; i<nameprint.length; i++) {
+  console.log(nameprint.charAt(i));
+}
+
+// break
+
+let ku = 0;
+while (ku < 6) {
+  if (ku === 4) {
+    break;
+  }
+  console.log(ku);
+  ku = ku + 1;
 }
 
 

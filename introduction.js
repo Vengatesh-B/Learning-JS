@@ -289,10 +289,10 @@ else {
 
 // Loops
 // while loop
-let i=0;
-while(i<=5){
-    console.log(i);
-    i = i+1;
+let i = 0;
+while (i <= 5) {
+  console.log(i);
+  i = i + 1;
 }
 
 // do while loop
@@ -301,30 +301,116 @@ let j = 59;
 do {
   console.log(j);
   j = j + 1;
-}while (j<60)
+} while (j < 60)
 
 // for loop 
 
-for (i=0; i<3; i++)
-{
+for (i = 0; i < 3; i++) {
   console.log(i);
 }
 
 let nameprint = "programming";
-for (i=0; i<nameprint.length; i++) {
+for (i = 0; i < nameprint.length; i++) {
   console.log(nameprint.charAt(i));
 }
 
-// break
+// break: to exit the loop
 
 let ku = 0;
 while (ku < 6) {
-  if (ku === 4) {
+  if (ku === 2) {
     break;
   }
   console.log(ku);
   ku = ku + 1;
 }
 
+// continue: to skip the particular iteration
+
+let con = 0;
+for (let co = 0; co < 5; co++) {
+  if (co === 2) {
+    continue;
+  }
+  console.log(co);
+  con = con + co;
+}
+
+// Functions 
+
+function sum(num1, num2) {
+  return num1 + num2;
+}
+
+console.log(sum(10, 2));
+console.log(sum(1, 4));
+console.log(sum(5, 6));
+
+// example to remove the string after the @ symbol from the email
+
+function getUserNameFromEmail(email) {
+  return (email.slice(0, email.indexOf("@")));
+}
+
+// Here we give the parameter that named as email
+console.log(getUserNameFromEmail("contactme@gmail.com"));
+
+// Create proper string with using fuction
+
+function toProperCase(word) {
+  return (((word.slice(0, 1).toUpperCase())) + word.slice(1).toLowerCase());
+}
+
+//we can use variable also
+
+const toProperCase2 = function (word) {
+  return (((word.slice(0, 1).toUpperCase())) + word.slice(1).toLowerCase());
+}
+
+// another method to define the function
+
+const toProperCase3 = (word) => {
+  return (((word.slice(0, 1).toUpperCase())) + word.slice(1).toLowerCase());
+}
+
+console.log(toProperCase3("suPeR"));
+
+// scope var, let, const
+
+// global scope
+
+var a = 1;
+let b = 2;
+const c = 3;
+
+console.log(`global:${a}`);
+console.log(`global:${b}`);
+console.log(`global:${c}`);
 
 
+
+// local scope -- function scope
+
+function myFunc() {
+  var c = 5;
+  
+// var is a function scope let const are not
+
+  // local scope -- block scope
+
+  if (true) {
+    var b = 7;
+
+    console.log(`block:${a}`);
+    console.log(`block:${b}`);
+    console.log(`block:${c}`);
+    // this variable only use this block of codes we can't use it outside of this block code
+  }
+  console.log(`function:${a}`);
+  console.log(`function:${b}`);
+  console.log(`function:${c}`);
+}
+myFunc()
+console.log(b);
+
+// Note the global variable can use within local block code but the local variable can't use outside of that block code

@@ -414,3 +414,96 @@ myFunc()
 console.log(b);
 
 // Note the global variable can use within local block code but the local variable can't use outside of that block code
+
+// Arrays
+
+const myArray = [];
+// adding elements in array
+
+myArray[0] = "my";
+myArray[1] = "array";
+myArray[2] = 554;
+myArray[3] = true;
+myArray[4] = 56;
+
+console.log(myArray);
+
+console.log(myArray.length);
+
+// add or delete element in last index
+
+myArray.push("last one");
+console.log(myArray);
+myArray.pop();
+console.log(myArray);
+
+// add or delete element in first index
+
+myArray.unshift("first one");
+console.log(myArray);
+myArray.shift();
+console.log(myArray);
+
+// when we will save push and pop element in one variable
+
+const lastItem = myArray.push("last item");
+console.log(lastItem); // it gives the length of the array
+
+const firstItem = myArray.unshift("first item");
+console.log(firstItem); // it give the length of the array
+
+const lastItemRemove = myArray.pop();
+console.log(lastItemRemove); // it stores the last removed item
+
+const firstItemRemove = myArray.shift();
+console.log(firstItemRemove); // it stores the first removed item
+
+// to delete the particular item in a array
+
+delete myArray[2];
+console.log(myArray);
+console.log(myArray[2]); // it give undefined data so we will not use it
+
+// best way to remove item in a array
+
+myArray.splice(2,1);
+
+console.log(myArray);
+
+// we can replace the item using splice
+
+myArray.splice(2,1,"false");
+console.log(myArray);
+
+// array slice -- it create the new array copy
+
+const newArray = myArray.slice(1,3);
+console.log(newArray);
+
+// reverse the array
+
+const reverseArray = myArray.reverse();
+console.log(reverseArray);
+
+// array join 
+
+const joinArray = myArray.join();
+console.log(joinArray); // it gives string with sepeartion of , seperator
+
+// array split
+
+const splitArray = joinArray.split(',');
+console.log(splitArray); // Note when we join and split the array all the data type will change to strings
+
+// adding two different arrays
+
+arrayA = ["fist",1,"second",2];
+arrayB = ["third",3,"fourth",4];
+
+const addedArray = arrayA.concat(arrayB);
+console.log(addedArray);
+
+// using spread operator we can concatinate the arrays
+
+const addedArray2 = [...arrayA,...arrayB];
+console.log(addedArray2);

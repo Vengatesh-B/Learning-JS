@@ -56,7 +56,7 @@ if (userConfirmation === true) {
     else {
       let reload = confirm("You didn't enter rock, paper or scissors.");
       reload ? location.reload() : alert("thanks.");
-      }
+    }
   }
   else {
     alert("Okay!! you didn't enter your choice, try next time");

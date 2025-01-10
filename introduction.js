@@ -507,3 +507,22 @@ console.log(addedArray);
 
 const addedArray2 = [...arrayA,...arrayB];
 console.log(addedArray2);
+
+// two and threed dimensional arrays
+
+const frontEnd = ["html","css","js","react"];
+const backEnd = ["python","java","nodejs","go"];
+const dataBase = ["mysql","mongodb","cassendra"];
+const courses = ["dataanalytics","dsa","oops"];
+const giveMoney = ["help others"]
+
+console.log(frontEnd[2],backEnd[1]);
+
+const fullStack = [frontEnd,backEnd];
+const dataBaseCourses = [dataBase,courses];
+
+
+console.log(fullStack[0][2],fullStack[1][1]);
+
+const threeDimensionarray = [fullStack,dataBaseCourses,giveMoney];
+console.log(threeDimensionarray[0][0][2],threeDimensionarray[1][1][2],threeDimensionarray[2][0]);

@@ -13,8 +13,17 @@ if (userConfirmation === true) {
       let rock = 1;
       let paper = 2;
       let scisscors = 3;
-      let computer = Math.ceil(Math.random() * 10);
-      if (computer <= 3) {
+      let computer = Math.ceil(Math.random() * 3);
+      const rpsArray = ["rock", "paper", "scissors"];
+      computer = rpsArray[computer];
+
+      const result = player === computer ? "game tie!"
+        : player === "rock" && computer === "paper" ? "Computer select paper! You Wins!"
+          : player === "paper" && computer === "scissors" ? "Computer select Scissors! you lose.."
+            : player === "scissors" && computer === "rock" ? "Computer select rock! you lose.." : "computer wins";
+      alert(result);
+
+     /* if (computer <= 3) {
         computer = "rock";
         if (player === computer) {
           alert("game tie");
@@ -49,7 +58,7 @@ if (userConfirmation === true) {
         else if (player === "rock") {
           alert("Computer select Scissors! You lose!");
         }
-      }
+      } */
       let playagain = confirm("Play again?");
       playagain ? location.reload() : alert("Ok, thanks for playing.");
     }

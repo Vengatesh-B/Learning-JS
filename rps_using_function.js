@@ -1,4 +1,4 @@
-// Rock,paper and Scissors game using array
+// Rock,paper and Scissors game using fuctions
 
 let userConfirmation = confirm("Shall we play the Rock,Paper and Scissors game?");
 if (userConfirmation === true) {

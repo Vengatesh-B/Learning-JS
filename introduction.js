@@ -338,7 +338,7 @@ for (let co = 0; co < 5; co++) {
 
 // Functions 
 
-function sum(num1, num2) {
+function sum(num1,num2) {
   return num1 + num2;
 }
 

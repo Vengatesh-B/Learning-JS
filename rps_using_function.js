@@ -22,43 +22,6 @@ if (userConfirmation === true) {
           : player === "paper" && computer === "scissors" ? "Computer select Scissors! you lose.."
             : player === "scissors" && computer === "rock" ? "Computer select rock! you lose.." : "computer wins";
       alert(result);
-
-     /* if (computer <= 3) {
-        computer = "rock";
-        if (player === computer) {
-          alert("game tie");
-        }
-        else if (player === "paper") {
-          alert("Computer select rock! you lose..");
-        }
-        else if (player === "scissors") {
-          alert("Computer select rock! you lose..")
-        }
-      }
-      else if (computer <= 6 && computer > 3) {
-        computer = "paper";
-        if (player === computer) {
-          alert("Computer select paper! game tie");
-        }
-        else if (player === "rock") {
-          alert("Computer select paper! You wins!");
-        }
-        else if (player === "scissors") {
-          alert("Computer select paper! You Wins!");
-        }
-      }
-      else {
-        computer = "scissors";
-        if (player === computer) {
-          alert("Computer select Scissors! game tie");
-        }
-        else if (player === "paper") {
-          alert("Computer select Scissors! you lose..");
-        }
-        else if (player === "rock") {
-          alert("Computer select Scissors! You lose!");
-        }
-      } */
       let playagain = confirm("Play again?");
       playagain ? location.reload() : alert("Ok, thanks for playing.");
     }

@@ -541,12 +541,17 @@ console.log(firstObject.sweet);
 const foods = {
   food: "dinner",
   person:2,
-  variety: {
+  variety: { // include another object also
     mainDish: "pulav",
     sidish: "paneer tikka"
   },
-  juices: ["apply","orange","mango"],
-  isTasty: true
+  juices: ["apply","orange","mango"], // adding array
+  isTasty: true,
+  action: function() {        // add a function type also
+    return `Have a Dinner ${this.variety.mainDish}`; // call the property mentioned in the object this is the way to call object inside the function
+  }
 };
 
-console.log(foods);
+console.log(foods.action());
+
+// object inheritance concept

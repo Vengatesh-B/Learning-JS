@@ -526,3 +526,27 @@ console.log(fullStack[0][2],fullStack[1][1]);
 
 const threeDimensionarray = [fullStack,dataBaseCourses,giveMoney];
 console.log(threeDimensionarray[0][0][2],threeDimensionarray[1][1][2],threeDimensionarray[2][0]);
+
+
+//objects
+// key-value pairs in curly braces
+
+const firstObject = {sweet:"laddu"};
+
+console.log(firstObject);
+console.log(firstObject.sweet);
+
+// we can add multiple data types in object
+
+const foods = {
+  food: "dinner",
+  person:2,
+  variety: {
+    mainDish: "pulav",
+    sidish: "paneer tikka"
+  },
+  juices: ["apply","orange","mango"],
+  isTasty: true
+};
+
+console.log(foods);

@@ -555,3 +555,54 @@ const foods = {
 console.log(foods.action());
 
 // object inheritance concept
+
+const house = {
+  hall:2,
+  kitchen: function() {
+    return "cooking room";
+  }
+};
+
+console.log(house.kitchen());
+
+// create another object using previous object 
+
+const rooms = Object.create(house);
+
+//add property in rooms object
+
+rooms.bedRooms=3;
+
+// modify the properties
+
+rooms.kitchen = function() {
+  return "kithcen room has 2 subrooms";
+}; 
+
+console.log(rooms.kitchen());
+
+const roomSelfs = Object.create(rooms);
+
+roomSelfs.kitchen = function() {
+  return "kitchen has 4 selfs";
+};
+
+console.log(house.kitchen());
+
+//for in loop in object
+
+const movie = {
+  actor:"sivaji",
+  music:"arr",
+  director:"mani",
+  singer:"janaki"
+};
+
+//print values and keys 
+
+console.log(Object.keys(movie));
+console.log(Object.values(movie));
+
+for (let job in movie) {
+  console.log(`${job} is`, `${movie[job]}`);
+}

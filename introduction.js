@@ -38,10 +38,6 @@ console.log(me !== 20); // false
 console.log(me <= 12); // false
 console.log(me >= 45); // false
 
-
-
-
-
 console.log("learn javascript");
 console.log(typeof (65));
 console.log(typeof ("hai"));
@@ -598,7 +594,15 @@ const movie = {
   singer:"janaki"
 };
 
+// add and delete key and values already exists object
+
+movie.actress = "sridevi";
+delete movie.director;
+
 //print values and keys 
+
+//to check whether to property is available in object or not 
+console.log(movie.hasOwnProperty("director"));
 
 console.log(Object.keys(movie));
 console.log(Object.values(movie));

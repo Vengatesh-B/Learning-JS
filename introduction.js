@@ -610,3 +610,20 @@ console.log(Object.values(movie));
 for (let job in movie) {
   console.log(`${job} is`, `${movie[job]}`);
 }
+
+// destruturing the objects
+
+// assign a variable using object properties
+const {actor:myFavActor} = movie;
+console.log(myFavActor);
+
+// another way to assign variable using object properties
+
+const {actor,actress,music,director,singer} = movie;
+console.log(actress);
+
+function sings({music}) {
+  return music;
+};
+
+console.log(sings(movie));

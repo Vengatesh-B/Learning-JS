@@ -627,3 +627,4 @@ function sings({music}) {
 };
 
 console.log(sings(movie));
+

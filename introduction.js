@@ -648,9 +648,30 @@ class pizza {
     this.type = typePizza; //using parameters
     this.size = sizePizza;
     this.crust = crustPizza; // we add the value here but that is not best practice
+    this.toppings = "mushroom";
+    this.spicy = "more";
+    this.veggies = [];
+  }
+  get toppingsPizza() {
+    return this.toppings;
+  }
+  set toppingsPizza(topItems){
+    this.toppings = topItems;
+  }
+  getSpicy() {
+    return this.spicy;
+  }
+  setSpicy(spicyLevel) {
+    this.spicy = spicyLevel;
+  }
+  getVeggies() {
+    return this.veggies;
+  }
+  setVeggies(veggies) {
+    this.veggies.push(veggies);
   }
   bake() {
-    return console.log(`Baking a ${this.size} ${this.crust} ${this.type} crust pizza`);
+    return console.log(`Baking a ${this.size} ${this.crust} ${this.type} crust pizza with ${this.toppings} with ${this.spicy} spicy add ${this.veggies}`);
   }
 }
 
@@ -658,4 +679,46 @@ class pizza {
 // using parameter in class
 
 const anotherPizza = new pizza("margarita","medium","original");
+// anotherPizza.toppings = "cheese";  (we should not change it directly, so we use get and set method  here)
+anotherPizza.toppingsPizza = "cheese";
+
+anotherPizza.setSpicy("medium");
+
+anotherPizza.setVeggies("cabbage");
+anotherPizza.setVeggies("capsicum");
 anotherPizza.bake();
+ // sometimes we need to change the value for the property in that case 
+
+ // parent & child class concept 
+
+ class car {
+  constructor(carBrand) {
+    this.brand = carBrand;
+    this.carModel = "delux";
+  }
+  getCarModel() {
+    return this.carModel;
+  }
+  setCarModel(carModel) {
+    this.carModel = carModel;
+  }
+ }
+
+// create child class
+
+class smallCar extends car {
+  #color = "white";
+  constructor(carBrand) {
+    super(carBrand);
+  
+  }
+  carType() {
+    console.log(`our car ${this.carModel} ${this.#color} color`);
+  }
+}
+
+const parentCar = new smallCar;
+parentCar.color = "red";
+parentCar.carType();
+
+

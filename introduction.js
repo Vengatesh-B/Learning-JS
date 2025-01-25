@@ -334,7 +334,7 @@ for (let co = 0; co < 5; co++) {
 
 // Functions 
 
-function sum(num1,num2) {
+function sum(num1, num2) {
   return num1 + num2;
 }
 
@@ -389,8 +389,8 @@ console.log(`global:${c}`);
 
 function myFunc() {
   var c = 5;
-  
-// var is a function scope let const are not
+
+  // var is a function scope let const are not
 
   // local scope -- block scope
 
@@ -462,18 +462,18 @@ console.log(myArray[2]); // it give undefined data so we will not use it
 
 // best way to remove item in a array
 
-myArray.splice(2,1);
+myArray.splice(2, 1);
 
 console.log(myArray);
 
 // we can replace the item using splice
 
-myArray.splice(2,1,"false");
+myArray.splice(2, 1, "false");
 console.log(myArray);
 
 // array slice -- it create the new array copy
 
-const newArray = myArray.slice(1,3);
+const newArray = myArray.slice(1, 3);
 console.log(newArray);
 
 // reverse the array
@@ -493,41 +493,41 @@ console.log(splitArray); // Note when we join and split the array all the data t
 
 // adding two different arrays
 
-arrayA = ["fist",1,"second",2];
-arrayB = ["third",3,"fourth",4];
+arrayA = ["fist", 1, "second", 2];
+arrayB = ["third", 3, "fourth", 4];
 
 const addedArray = arrayA.concat(arrayB);
 console.log(addedArray);
 
 // using spread operator we can concatinate the arrays
 
-const addedArray2 = [...arrayA,...arrayB];
+const addedArray2 = [...arrayA, ...arrayB];
 console.log(addedArray2);
 
 // two and threed dimensional arrays
 
-const frontEnd = ["html","css","js","react"];
-const backEnd = ["python","java","nodejs","go"];
-const dataBase = ["mysql","mongodb","cassendra"];
-const courses = ["dataanalytics","dsa","oops"];
+const frontEnd = ["html", "css", "js", "react"];
+const backEnd = ["python", "java", "nodejs", "go"];
+const dataBase = ["mysql", "mongodb", "cassendra"];
+const courses = ["dataanalytics", "dsa", "oops"];
 const giveMoney = ["help others"]
 
-console.log(frontEnd[2],backEnd[1]);
+console.log(frontEnd[2], backEnd[1]);
 
-const fullStack = [frontEnd,backEnd];
-const dataBaseCourses = [dataBase,courses];
+const fullStack = [frontEnd, backEnd];
+const dataBaseCourses = [dataBase, courses];
 
 
-console.log(fullStack[0][2],fullStack[1][1]);
+console.log(fullStack[0][2], fullStack[1][1]);
 
-const threeDimensionarray = [fullStack,dataBaseCourses,giveMoney];
-console.log(threeDimensionarray[0][0][2],threeDimensionarray[1][1][2],threeDimensionarray[2][0]);
+const threeDimensionarray = [fullStack, dataBaseCourses, giveMoney];
+console.log(threeDimensionarray[0][0][2], threeDimensionarray[1][1][2], threeDimensionarray[2][0]);
 
 
 //objects
 // key-value pairs in curly braces
 
-const firstObject = {sweet:"laddu"};
+const firstObject = { sweet: "laddu" };
 
 console.log(firstObject);
 console.log(firstObject.sweet);
@@ -536,14 +536,14 @@ console.log(firstObject.sweet);
 
 const foods = {
   food: "dinner",
-  person:2,
+  person: 2,
   variety: { // include another object also
     mainDish: "pulav",
     sidish: "paneer tikka"
   },
-  juices: ["apply","orange","mango"], // adding array
+  juices: ["apply", "orange", "mango"], // adding array
   isTasty: true,
-  action: function() {        // add a function type also
+  action: function () {        // add a function type also
     return `Have a Dinner ${this.variety.mainDish}`; // call the property mentioned in the object this is the way to call object inside the function
   }
 };
@@ -553,8 +553,8 @@ console.log(foods.action());
 // object inheritance concept
 
 const house = {
-  hall:2,
-  kitchen: function() {
+  hall: 2,
+  kitchen: function () {
     return "cooking room";
   }
 };
@@ -567,19 +567,19 @@ const rooms = Object.create(house);
 
 //add property in rooms object
 
-rooms.bedRooms=3;
+rooms.bedRooms = 3;
 
 // modify the properties
 
-rooms.kitchen = function() {
+rooms.kitchen = function () {
   return "kithcen room has 2 subrooms";
-}; 
+};
 
 console.log(rooms.kitchen());
 
 const roomSelfs = Object.create(rooms);
 
-roomSelfs.kitchen = function() {
+roomSelfs.kitchen = function () {
   return "kitchen has 4 selfs";
 };
 
@@ -588,10 +588,10 @@ console.log(house.kitchen());
 //for in loop in object
 
 const movie = {
-  actor:"sivaji",
-  music:"arr",
-  director:"mani",
-  singer:"janaki"
+  actor: "sivaji",
+  music: "arr",
+  director: "mani",
+  singer: "janaki"
 };
 
 // add and delete key and values already exists object
@@ -614,17 +614,48 @@ for (let job in movie) {
 // destruturing the objects
 
 // assign a variable using object properties
-const {actor:myFavActor} = movie;
+const { actor: myFavActor } = movie;
 console.log(myFavActor);
 
 // another way to assign variable using object properties
 
-const {actor,actress,music,director,singer} = movie;
+const { actor, actress, music, director, singer } = movie;
 console.log(actress);
 
-function sings({music}) {
+function sings({ music }) {
   return music;
 };
 
 console.log(sings(movie));
 
+// classes 
+
+// class is a templates to create the javascript objects
+
+// for example we create below object using class
+const myPizza = {
+  size: "medium",
+  crust: "original",
+  bake: function () {
+    return console.log(`Baking a ${this.size} ${this.crust} crust pizza.`);
+  }
+};
+
+myPizza.bake();
+
+class pizza {
+  constructor(typePizza,sizePizza,crustPizza) {
+    this.type = typePizza; //using parameters
+    this.size = sizePizza;
+    this.crust = crustPizza; // we add the value here but that is not best practice
+  }
+  bake() {
+    return console.log(`Baking a ${this.size} ${this.crust} ${this.type} crust pizza`);
+  }
+}
+
+// Now create an object using this class
+// using parameter in class
+
+const anotherPizza = new pizza("margarita","medium","original");
+anotherPizza.bake();

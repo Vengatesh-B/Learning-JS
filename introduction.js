@@ -1,3 +1,5 @@
+"use strict";
+
 // comment in js
 
 // data types in js
@@ -19,8 +21,8 @@
 
 // we can execute the mathematical operations
 
-firstNum = 8;
-secondStr = "cat";
+let firstNum = 8;
+let secondStr = "cat";
 
 let result = firstNum + secondStr;
 console.log(result); // when we give number and string addition it will convert to string type
@@ -363,7 +365,7 @@ const toProperCase2 = function (word) {
   return (((word.slice(0, 1).toUpperCase())) + word.slice(1).toLowerCase());
 }
 
-// another method to define the function
+// another method to define the function (new feat ES6)
 
 const toProperCase3 = (word) => {
   return (((word.slice(0, 1).toUpperCase())) + word.slice(1).toLowerCase());
@@ -493,8 +495,8 @@ console.log(splitArray); // Note when we join and split the array all the data t
 
 // adding two different arrays
 
-arrayA = ["fist", 1, "second", 2];
-arrayB = ["third", 3, "fourth", 4];
+const arrayA = ["fist", 1, "second", 2];
+const arrayB = ["third", 3, "fourth", 4];
 
 const addedArray = arrayA.concat(arrayB);
 console.log(addedArray);
@@ -693,7 +695,7 @@ anotherPizza.bake();
 
  class car {
   constructor(carBrand) {
-    this.brand = carBrand;
+    this.brand = carBrand; // public property
     this.carModel = "delux";
   }
   getCarModel() {
@@ -707,18 +709,84 @@ anotherPizza.bake();
 // create child class
 
 class smallCar extends car {
-  #color = "white";
+  #color = "white"; // private property
   constructor(carBrand) {
     super(carBrand);
   
   }
   carType() {
-    console.log(`our car ${this.carModel} ${this.#color} color`);
+    return console.log(`our car ${this.brand} ${this.carModel} ${this.#color} color`);
   }
 }
 
-const parentCar = new smallCar;
+const parentCar = new smallCar("volvo");  //create object
+parentCar.carModel = "super delux";
 parentCar.color = "red";
 parentCar.carType();
 
+// naming conventions :: we could change the value of the property in outside the class but some cases we need not to allow it, how do not allow to change the property value outside the class 
+// so that we add # before the property it don't allow to change the property outside the class.
 
+// Factory Function
+
+function pizzaFactory(sizePizza) {
+  const crust = "original";
+  const size = sizePizza;
+  return {
+    bake: ()=> console.log(`Baking a ${size} ${crust} crust pizza`)
+  };
+}
+
+const newPizza = pizzaFactory("small");
+newPizza.bake();
+
+// we could not change the value of the property in factory funcation and also we could not access the value this is the problem of factory fucntion
+
+console.log(newPizza.crust); // undefined 
+
+//Note we only access the value through get method 
+
+console.log(parentCar.color); // only it shows outside declared value could the access the private property this is the new feature
+
+
+//JSON - Javascript Object Notation
+// text format
+// it is used to send and receive data in many programming languages
+
+const sendJSON = JSON.stringify(parentCar);
+console.log(sendJSON);
+console.log(sendJSON.name); // could not access the data
+console.log(typeof(sendJSON)); // string
+
+const receiveJSON = JSON.parse(sendJSON);
+console.log(receiveJSON); // it converts into object
+
+//Note only the string data send and receive in json the function will not send in json format, it is just a text file
+
+
+// Errors and Error Handling
+
+const box = "yellow";
+console.log(box);
+// it is executed but the problem is we actually put let const var.. to avoid this reference error we should use strict in the beginning of this file
+
+//Object..create();  // throw syntax error (the entire code will not executed)
+
+// box = "blue";  // throw type error because box is already constant
+
+// Note: in type and reference errors the code will executed it is difficult to debug the process to avoid this we will try catch method
+
+const makeError = () => {
+  try {
+    const name = "ram";
+    name = "sid";
+  }
+  catch(err) {
+    console.log(err);
+    console.error(err);
+    console.warn(err.stack);
+    console.table(err);
+  }
+};
+
+makeError();

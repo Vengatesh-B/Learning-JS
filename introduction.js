@@ -778,8 +778,8 @@ console.log(box);
 
 const makeError = () => {
   try {
-    const name = "ram";
-    name = "sid";
+    const name = "siva";
+      name = "sid";
   }
   catch(err) {
     console.log(err);
@@ -790,3 +790,55 @@ const makeError = () => {
 };
 
 makeError();
+
+// create the custome errors
+
+const customErr = () => {
+  try {
+    throw new customError("This is a custom Erro");
+  }
+ catch(err) {
+  console.error(err.stack);
+}
+}
+
+
+function customError(message) {
+  this.message = message;
+  this.name = "customError";
+  this.stack = `${this.name}:${this.message}`;
+}
+
+customErr();
+
+// we have inbuild js custom error 
+
+const newError = () => {
+  try {
+    throw new Error("This is javascript inbuild custom error message");
+  }catch(er){
+    console.error(er)
+  }
+};
+
+newError();
+
+const errorHandling = () => {
+  let i = 0;
+  while (i <= 5) {
+    try{
+      if (i%2 !==0 ) {
+        throw new Error("Odd Number");
+      }
+      console.log("Even Number")
+    }catch(err){
+      console.error(err.message);
+    } finally {
+      console.log("..finally");
+      i++;
+    }
+  }
+};
+
+errorHandling();
+

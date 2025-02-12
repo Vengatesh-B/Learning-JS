@@ -70,9 +70,9 @@ console.log(vari.toUpperCase());
 
 console.log(vari.includes("date"));
 
-console.log("welcome to my home".split("o")) // split the word by the specified letter
+console.log("welcome to my home".split("o")); // split the word by the specified letter
 
-console.log("welcome to my home".split(""))
+console.log("welcome to my home".split(""));
 
 
 // Numbers concept 
@@ -114,7 +114,7 @@ console.log(myNumber + myNumber); // result is number (68)
 
 console.log('numberconcepte');
 
-console.log(Number.isInteger(myNumber));
+console.log(Number.isInteger(myNumber));       
 
 let parseString = "45.456676abcd";
 
@@ -171,7 +171,7 @@ console.log(randomlet.charAt(Math.random() * randomlet.length));
 // if statements
 
 let customerISBanned = false;
-let viewer = "js course"
+let viewer = "js course";
 let reply;
 let finance = true;
 if (customerISBanned) {
